@@ -5,7 +5,9 @@ import ThemeContext from "../contexts/themecontext";
 function Button() {
   return (
     <ThemeContext.Consumer>
-      {(value) => <button className={value}>Submit</button>}
+      {(value) => {
+      console.log("value from button: " + value);
+      <button className={value}>Submit</button>}}
     </ThemeContext.Consumer>
   );
 }
